@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <title>Four Lanes Creative | Brand, Web &amp; Strategy Studio</title>
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="Four Lanes Creative is a digital media studio building sharp brands, modern websites, and marketing strategy that converts, with logo, design, web, and strategy under one roof.">
+<meta name="description" content="Four Lanes Creative is a digital media studio building sharp brands, modern websites, and marketing strategy that converts — under one roof.">
 <link rel="canonical" href="https://fourlanescreative.com/">
 
 <link rel="icon" type="image/png" sizes="512x512" href="/assets/brand/favicon-512.png">
@@ -46,7 +46,12 @@
   "logo": "https://fourlanescreative.com/assets/brand/flc-hero-lockup.png",
   "image": "https://fourlanescreative.com/assets/brand/og-share-card.png",
   "email": "info@fourlanescreative.com",
-  "areaServed": "US",
+  "address": {
+    "@type": "PostalAddress",
+    "addressRegion": "PA",
+    "addressCountry": "US"
+  },
+  "areaServed": ["Bucks County, PA", "US"],
   "sameAs": []
 }
 </script>
@@ -282,6 +287,10 @@
     color:var(--text);border-bottom:2px solid var(--red);padding-bottom:6px;
     position:relative;display:inline-block;
   }
+  .contact-box p.contact-location{
+    font-size:13px;color:var(--muted);margin:22px auto 0;
+    position:relative;max-width:480px;
+  }
 
   /* footer */
   footer{padding:50px 0 40px;border-top:1px solid var(--border);}
@@ -512,6 +521,7 @@
       <h2>Have a project in mind?</h2>
       <p>Tell us about your brand, site, or campaign, and we'll take it from there.</p>
       <a href="mailto:info@fourlanescreative.com" class="contact-email">info@fourlanescreative.com</a>
+      <p class="contact-location">Based in Bucks County, PA — working with clients everywhere.</p>
     </div>
   </div>
 </section>
