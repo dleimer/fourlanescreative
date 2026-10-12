@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>The Workflow — MyExpressOil</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --green: #83c141;
+    --green-dark: #5d8f27;
+    --green-light: #f2f8e8;
+    --orange: #f7941d;
+    --orange-dark: #d97908;
+    --ink: #1a1a1a;
+    --muted: #6b7280;
+    --bg: #f7f8f5;
+    --card: #ffffff;
+    --border: rgba(26,26,26,0.1);
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; }
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: 'Inter', -apple-system, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    padding: 48px 20px 64px;
+  }
+  .wrap { max-width: 860px; margin: 0 auto; }
+  h1 { font-weight: 800; letter-spacing: -0.01em; margin: 0; }
+  p { margin: 0; }
+
+  .masthead { display: flex; align-items: center; gap: 10px; margin-bottom: 36px; }
+  .masthead img { height: 26px; width: auto; }
+  .masthead .word { font-size: 17px; font-weight: 800; }
+  .masthead .for-badge { font-size: 11px; font-weight: 600; color: var(--muted); padding: 3px 10px; border: 1px solid var(--border); border-radius: 20px; margin-left: 2px; }
+
+  .hero h1 { font-size: clamp(26px, 5vw, 36px); line-height: 1.15; max-width: 20ch; }
+  .hero .accent { color: var(--green-dark); }
+  .hero p { margin-top: 14px; font-size: 17px; color: var(--muted); max-width: 58ch; }
+
+  .video-card {
+    margin-top: 36px;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 10px;
+    box-shadow: 0 20px 50px rgba(26,26,26,0.08);
+  }
+  video { display: block; width: 100%; border-radius: 10px; background: #000; }
+
+  .caption { margin-top: 18px; font-size: 14px; color: var(--muted); text-align: center; }
+
+  .close { border-top: 1px solid var(--border); margin-top: 44px; padding-top: 24px; }
+  .close p { font-size: 14.5px; color: var(--muted); max-width: 56ch; }
+  .contact { margin-top: 18px; font-size: 14px; }
+  .contact .name { font-weight: 700; }
+  .contact .co { color: var(--muted); }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="masthead">
+    <img src="assets/flc-symbol-ink.png" alt="Four Lanes Creative">
+    <div class="word">Four Lanes Creative</div>
+    <div class="for-badge">For MyExpressOil</div>
+  </div>
+
+  <div class="hero">
+    <h1>What happens between the <span class="accent">call</span> and the <span class="accent">truck</span></h1>
+    <p>A 50-second look at the oil delivery concierge: the call comes in, the AI collects the details, and a draft order lands in Droplet — ready for your team to price and finalize.</p>
+  </div>
+
+  <div class="video-card">
+    <video controls preload="metadata" poster="assets/myexpressoil-workflow-poster.jpg">
+      <source src="assets/myexpressoil-workflow.mp4" type="video/mp4">
+    </video>
+  </div>
+  <div class="caption">Sound on — there's a short musical bed under the voiceover-free walkthrough.</div>
+
+  <div class="close">
+    <p>Happy to walk through how this would actually connect to Droplet, or show it running live.</p>
+    <div class="contact">
+      <div class="name">Daniel Leimer</div>
+      <div class="co">Four Lanes Creative</div>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>
