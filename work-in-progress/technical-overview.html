@@ -51,6 +51,19 @@
   </section>
 
   <section>
+    <div class="eyebrow">The pipeline</div>
+    <div class="section-title">How a call actually gets handled</div>
+    <div class="section-rule"></div>
+    <p class="lede">This is the designed flow for the live phone line — the piece marked "not yet built" above. The demo already proves out steps 2 and 3; what's missing is step 1, the actual phone number.</p>
+    <div class="steps">
+      <div class="step-row"><div class="n">1</div><div class="t"><strong>The call comes in over a real phone line</strong><span>A telephony provider answers on the existing MyExpressOil number and streams the call to the app as it happens.</span></div></div>
+      <div class="step-row"><div class="n">2</div><div class="t"><strong>Speech becomes text, turn by turn</strong><span>What the caller says is transcribed in real time and sent over as each turn finishes — no separate recording-and-upload step.</span></div></div>
+      <div class="step-row"><div class="n">3</div><div class="t"><strong>Anthropic generates the reply and the data, together</strong><span>The transcript, plus whatever's already known about the caller, goes to Anthropic in one call. It returns both what to say back and the structured fields — category, urgency, gallons, timing — in the same response.</span></div></div>
+      <div class="step-row"><div class="n">4</div><div class="t"><strong>Text becomes speech, and the turn repeats</strong><span>The reply is read back in a natural voice, and the cycle continues until the order's details are complete — each call keeps its own running transcript server-side, so every turn has full context.</span></div></div>
+    </div>
+  </section>
+
+  <section>
     <div class="eyebrow">Scope, on purpose</div>
     <div class="section-title">What the AI actually fills in</div>
     <div class="section-rule"></div>
@@ -87,7 +100,7 @@
     <div class="section-title">Nothing exotic</div>
     <div class="section-rule"></div>
     <div class="steps">
-      <div class="step-row"><div class="n">1</div><div class="t"><strong>Claude (Anthropic) handles the conversation</strong><span>Triage, scheduling dialogue, and the gallons estimate are all one model call — no separate NLU pipeline to maintain.</span></div></div>
+      <div class="step-row"><div class="n">1</div><div class="t"><strong>Anthropic handles the conversation</strong><span>Triage, scheduling dialogue, and the gallons estimate are all one model call — no separate NLU pipeline to maintain.</span></div></div>
       <div class="step-row"><div class="n">2</div><div class="t"><strong>A standard web app serves the live demo</strong><span>Simple, well-understood stack — easy for either team to extend once the integration shape is clear.</span></div></div>
       <div class="step-row"><div class="n">3</div><div class="t"><strong>The open question is purely the Droplet connection</strong><span>Everything else here is proven. What's left is how this talks to your systems.</span></div></div>
     </div>
