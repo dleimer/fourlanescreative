@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Technical Overview — MyExpressOil</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/pitch.css">
+</head>
+<body>
+<div class="lanes"></div>
+<div class="page">
+<div class="wrap">
+
+  <div class="masthead">
+    <img src="assets/flc-symbol-ink.png" alt="Four Lanes Creative">
+    <div class="word">Four Lanes <span class="accent">Creative</span></div>
+  </div>
+
+  <div class="hero">
+    <h1>The <span class="accent">technical</span> picture</h1>
+    <p>What's actually built, what it does and doesn't automate, and what we'd want to figure out together with Droplet.</p>
+  </div>
+
+  <section>
+    <div class="eyebrow">Current state</div>
+    <div class="section-title">What's built, what's next</div>
+    <div class="section-rule"></div>
+    <div class="compare">
+      <div class="compare-card now">
+        <div class="compare-label">Working today</div>
+        <div class="compare-list">
+          <div class="compare-row"><span class="mk">✓</span><span>A live demo that triages a call and correctly routes it — oil delivery, billing, new customer, or general.</span></div>
+          <div class="compare-row"><span class="mk">✓</span><span>A full scheduling conversation that collects name, address, tank level, and timing, naturally.</span></div>
+          <div class="compare-row"><span class="mk">✓</span><span>Returning customers recognized automatically — tank size, delivery type, gate codes, account balance.</span></div>
+          <div class="compare-row"><span class="mk">✓</span><span>A draft-order view mapped directly to the fields on Droplet's own order screen.</span></div>
+        </div>
+      </div>
+      <div class="compare-card">
+        <div class="compare-label">Not yet built</div>
+        <div class="compare-list">
+          <div class="compare-row"><span class="mk">×</span><span>A live phone line — right now the demo runs as a web simulator, not a number someone can actually call.</span></div>
+          <div class="compare-row"><span class="mk">×</span><span>A real connection into Droplet — customer and order data are simulated, not pulled from or written to your system.</span></div>
+          <div class="compare-row"><span class="mk">×</span><span>Support for more than one dealer account at a time.</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="eyebrow">Scope, on purpose</div>
+    <div class="section-title">What the AI actually fills in</div>
+    <div class="section-rule"></div>
+    <p class="lede">The concierge's job ends where pricing judgment begins. It hands off a complete, well-formed draft — not a finished, billable order.</p>
+    <div class="field-group">
+      <div class="field-group-hdr"><span>Customer</span></div>
+      <div class="field-list">
+        <div class="field"><div class="field-label">Name</div><div class="field-value">Bob Henderson</div></div>
+        <div class="field"><div class="field-label">Account #</div><div class="field-value">ECI-1047</div></div>
+        <div class="field"><div class="field-label">Address</div><div class="field-value">847 Maple Drive, Doylestown, PA</div></div>
+      </div>
+    </div>
+    <div class="field-group">
+      <div class="field-group-hdr"><span>Delivery details</span></div>
+      <div class="field-list">
+        <div class="field"><div class="field-label">Gallons (est.)</div><div class="field-value">~210 gal</div></div>
+        <div class="field"><div class="field-label">Tank level</div><div class="field-value">About a quarter tank</div></div>
+        <div class="field"><div class="field-label">Priority</div><div class="field-value">Normal</div></div>
+        <div class="field"><div class="field-label">Requested timing</div><div class="field-value">This week, mornings</div></div>
+      </div>
+    </div>
+    <div class="field-group pending">
+      <div class="field-group-hdr"><span>Pricing &amp; payment</span><span class="tag">Dispatcher completes</span></div>
+      <div class="field-list">
+        <div class="field"><div class="field-label">$ / Gallon</div><div class="field-value">set by dispatcher</div></div>
+        <div class="field"><div class="field-label">Fees &amp; discounts</div><div class="field-value">set by dispatcher</div></div>
+        <div class="field"><div class="field-label">Payment method</div><div class="field-value">account on file</div></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="eyebrow">Built on</div>
+    <div class="section-title">Nothing exotic</div>
+    <div class="section-rule"></div>
+    <div class="steps">
+      <div class="step-row"><div class="n">1</div><div class="t"><strong>Claude (Anthropic) handles the conversation</strong><span>Triage, scheduling dialogue, and the gallons estimate are all one model call — no separate NLU pipeline to maintain.</span></div></div>
+      <div class="step-row"><div class="n">2</div><div class="t"><strong>A standard web app serves the live demo</strong><span>Simple, well-understood stack — easy for either team to extend once the integration shape is clear.</span></div></div>
+      <div class="step-row"><div class="n">3</div><div class="t"><strong>The open question is purely the Droplet connection</strong><span>Everything else here is proven. What's left is how this talks to your systems.</span></div></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="eyebrow">Figuring out together</div>
+    <div class="section-title">Questions for Droplet</div>
+    <div class="section-rule"></div>
+    <div class="steps">
+      <div class="step-row"><div class="n">1</div><div class="t"><strong>Is there an API or webhook for customer lookup and order creation?</strong><span>The piece that would turn a draft order into something that actually lands in your system.</span></div></div>
+      <div class="step-row"><div class="n">2</div><div class="t"><strong>MyExpressOil's own ordering flow already talks to Droplet</strong><span>Is that same connection usable by a phone-based concierge, or is it purpose-built for the web form?</span></div></div>
+      <div class="step-row"><div class="n">3</div><div class="t"><strong>Where should a draft order land for dispatcher review?</strong><span>Inside Droplet itself, or somewhere else in your team's workflow.</span></div></div>
+    </div>
+  </section>
+
+  <div class="close">
+    <h2>Happy to get into the weeds on any of this.</h2>
+    <p>There's also the <a href="eci-oil-delivery-overview.html">full overview</a> and a short <a href="myexpressoil-workflow-video.html">walkthrough video</a> if you haven't seen those yet.</p>
+    <div class="contact">
+      <div class="name">Daniel Leimer</div>
+      <div class="co">Four Lanes Creative</div>
+    </div>
+  </div>
+
+</div>
+</div>
+</body>
+</html>

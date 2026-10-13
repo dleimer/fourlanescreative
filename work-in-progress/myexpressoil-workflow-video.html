@@ -8,92 +8,12 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<style>
-  :root {
-    --bg: #f7f7f7;
-    --card: #ffffff;
-    --red: #d71920;
-    --red-dark: #9e1218;
-    --ink: #1e1e1e;
-    --muted: #6b6b6b;
-    --border: rgba(0,0,0,0.09);
-  }
-  * { box-sizing: border-box; }
-  html, body { margin: 0; }
-  body {
-    background: var(--bg);
-    color: var(--ink);
-    font-family: 'Inter', system-ui, sans-serif;
-    font-size: 16px;
-    line-height: 1.6;
-    -webkit-font-smoothing: antialiased;
-  }
-  .lanes {
-    position: fixed; inset: 0; z-index: 0; pointer-events: none;
-    background: linear-gradient(100deg,
-      transparent 0%, transparent 7%,
-      rgba(30,30,30,0.05) 7%, rgba(30,30,30,0.05) 8.6%,
-      transparent 8.6%, transparent 28%,
-      rgba(30,30,30,0.07) 28%, rgba(30,30,30,0.07) 29.6%,
-      transparent 29.6%, transparent 53%,
-      rgba(215,25,32,0.1) 53%, rgba(215,25,32,0.1) 54.6%,
-      transparent 54.6%, transparent 79%,
-      rgba(107,107,107,0.06) 79%, rgba(107,107,107,0.06) 80.4%,
-      transparent 80.4%, transparent 100%);
-  }
-  .page { position: relative; z-index: 1; padding: 48px 20px 64px; }
-  .wrap { max-width: 860px; margin: 0 auto; }
-  h1 {
-    font-family: 'Oswald', system-ui, sans-serif;
-    text-transform: uppercase;
-    letter-spacing: 0.02em;
-    margin: 0;
-  }
-  p { margin: 0; }
-
-  .masthead { display: flex; align-items: center; gap: 10px; margin-bottom: 44px; }
-  .masthead img { height: 24px; width: auto; }
-  .masthead .word {
-    font-family: 'Oswald', system-ui, sans-serif;
-    font-size: 16px; letter-spacing: 0.04em; font-weight: 600;
-  }
-  .masthead .word .accent { color: var(--red); }
-
-  .hero h1 { font-size: clamp(26px, 5vw, 38px); line-height: 1.12; max-width: 20ch; }
-  .hero .accent { color: var(--red); }
-  .hero p { margin-top: 16px; font-size: 17px; color: var(--muted); max-width: 58ch; font-family: 'Inter', sans-serif; }
-
-  .video-card {
-    margin-top: 36px;
-    background: var(--card);
-    border: 1px solid var(--border);
-    border-radius: 4px;
-    padding: 10px;
-    box-shadow: 0 20px 50px rgba(30,30,30,0.1);
-  }
-  video { display: block; width: 100%; border-radius: 2px; background: #000; }
-
-  .caption {
-    margin-top: 16px; text-align: center;
-    font-family: 'Oswald', system-ui, sans-serif;
-    font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted);
-  }
-
-  .close { border-top: 1px solid var(--border); margin-top: 48px; padding-top: 28px; }
-  .close p { font-size: 14.5px; color: var(--muted); max-width: 56ch; }
-  .contact { margin-top: 20px; }
-  .contact .name {
-    font-family: 'Oswald', system-ui, sans-serif;
-    font-size: 18px; letter-spacing: 0.03em;
-    color: var(--ink); border-bottom: 2px solid var(--red); padding-bottom: 5px; display: inline-block;
-  }
-  .contact .co { margin-top: 6px; font-size: 13px; color: var(--muted); }
-</style>
+<link rel="stylesheet" href="assets/pitch.css">
 </head>
 <body>
 <div class="lanes"></div>
 <div class="page">
-<div class="wrap">
+<div class="wrap wide">
 
   <div class="masthead">
     <img src="assets/flc-symbol-ink.png" alt="Four Lanes Creative">
@@ -105,7 +25,7 @@
     <p>A 50-second look at the oil delivery concierge: the call comes in, the AI collects the details, and a draft order lands in Droplet — ready for your team to price and finalize.</p>
   </div>
 
-  <div class="video-card">
+  <div class="video-card" style="margin-top: 36px;">
     <video controls preload="metadata" poster="assets/myexpressoil-workflow-poster.jpg">
       <source src="assets/myexpressoil-workflow.mp4" type="video/mp4">
     </video>
@@ -113,7 +33,7 @@
   <div class="caption">Sound on — short musical bed, no voiceover</div>
 
   <div class="close">
-    <p>Happy to walk through how this would actually connect to Droplet.</p>
+    <p>Happy to walk through how this would actually connect to Droplet. There's also the <a href="eci-oil-delivery-overview.html">full overview</a> and a <a href="technical-overview.html">technical overview</a> if you want more detail.</p>
     <div class="contact">
       <div class="name">Daniel Leimer</div>
       <div class="co">Four Lanes Creative</div>
